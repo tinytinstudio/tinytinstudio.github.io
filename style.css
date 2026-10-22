@@ -1,0 +1,149 @@
+:root {
+  --sky-1: #f4f7fd;
+  --sky-2: #e8e6f7;
+  --surface: #ffffff;
+  --border: #cfd8ec;
+  --text: #121a38;
+  --muted: #535e80;
+  --accent: #77580f;
+  --wisp: #1f5fbf;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sky-1: #070c24;
+    --sky-2: #1a1846;
+    --surface: #1a2048;
+    --border: #353c78;
+    --text: #e8ecfa;
+    --muted: #a0a9ce;
+    --accent: #e7c873;
+    --wisp: #8ec5ff;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--sky-1), var(--sky-2)) fixed;
+  color: var(--text);
+  font: 17px/1.65 'Figtree', system-ui, sans-serif;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 20px 64px;
+}
+
+a {
+  color: var(--wisp);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.brand img {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+}
+
+.wordmark {
+  font-family: 'Grenze Gotisch', serif;
+  font-weight: 600;
+  font-size: 34px;
+  letter-spacing: 0.5px;
+}
+
+.wordmark em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+h1,
+h2 {
+  font-family: 'IM Fell English', Georgia, serif;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 36px 0 4px;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 36px 0 8px;
+}
+
+.tagline {
+  font-family: 'IM Fell English', Georgia, serif;
+  font-style: italic;
+  color: var(--muted);
+  font-size: 20px;
+  margin: 4px 0 0;
+}
+
+.meta {
+  font-family: 'IM Fell English SC', Georgia, serif;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+}
+
+.card {
+  margin-top: 24px;
+  padding: 20px 22px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.card p:first-child {
+  margin-top: 0;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+ul {
+  padding-left: 22px;
+}
+
+li {
+  margin: 6px 0;
+}
+
+.rule {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 28px 0 0;
+  color: var(--accent);
+  opacity: 0.75;
+}
+
+.rule::before,
+.rule::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--accent);
+}
+
+footer {
+  margin-top: 48px;
+  color: var(--muted);
+  font-size: 15px;
+}
