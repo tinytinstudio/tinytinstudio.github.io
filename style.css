@@ -26,6 +26,10 @@
   box-sizing: border-box;
 }
 
+html {
+  background: var(--sky-2);
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -146,4 +150,24 @@ footer {
   margin-top: 48px;
   color: var(--muted);
   font-size: 15px;
+}
+
+.card h2:first-child {
+  margin-top: 0;
+}
+
+.card .meta {
+  margin: 0 0 4px;
+}
+
+.version,
+.build {
+  font-family: 'Figtree', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.build {
+  font-weight: 400;
+  color: var(--muted);
 }
